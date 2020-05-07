@@ -1,0 +1,992 @@
+https://kernel.ubuntu.com/~cking/tarballs/stress-ng/
+https://www.cyberciti.biz/faq/stress-test-linux-unix-server-with-stress-ng/
+
+
+./stress-ng --cpu 5 --io 1 --vm 1 --vm-bytes 100% --timeout 120s --metrics-brief
+
+
+zlinuxssi01.ahe.com
+zlinuxssi02.ahe.com
+zlinuxssi03.ahe.com
+zlinuxssi04.ahe.com
+zlinuxssi05.ahe.com
+
+
+[rgaiotto@oc5255651151 ~]$ ssh support@zlinuxssi01.ahe.com
+zlinuxssi01:~ # scp rgaiotto@9.160.64.35:/home/rgaiotto/stress-ng /tmp/
+
+zlinuxssi01:~ # cd /tmp/
+
+zlinuxssi01:/tmp # scp rgaiotto@MYLOCALHOST:/home/rgaiotto/stress-ng-0.09.56.tar.xz /tmp/
+rgaiotto@MYLOCALHOS's password: 
+stress-ng-0.09.56.tar.xz                                                                                                                      100%  377KB 377.3KB/s   00:01    
+zlinuxssi01:/tmp # tar xvf stress-ng-0.09.56.tar.xz
+stress-ng-0.09.56/
+stress-ng-0.09.56/stress-bind-mount.c
+stress-ng-0.09.56/stress-brk.c
+stress-ng-0.09.56/stress-readahead.c
+stress-ng-0.09.56/stress-ipsec-mb.c
+stress-ng-0.09.56/stress-timerfd.c
+stress-ng-0.09.56/stress-cap.c
+stress-ng-0.09.56/stress-rtc.c
+stress-ng-0.09.56/stress-tsearch.c
+stress-ng-0.09.56/stress-rdrand.c
+stress-ng-0.09.56/.travis.yml
+stress-ng-0.09.56/snap/
+stress-ng-0.09.56/snap/snapcraft.yaml
+stress-ng-0.09.56/snap/Makefile
+stress-ng-0.09.56/stress-sync-file.c
+stress-ng-0.09.56/stress-sem.c
+stress-ng-0.09.56/stress-matrix-3d.c
+stress-ng-0.09.56/stress-mmapmany.c
+stress-ng-0.09.56/stress-stackmmap.c
+stress-ng-0.09.56/stress-null.c
+stress-ng-0.09.56/stress-dentry.c
+stress-ng-0.09.56/core-job.c
+stress-ng-0.09.56/stress-lease.c
+stress-ng-0.09.56/stress-nop.c
+stress-ng-0.09.56/stress-mlock.c
+stress-ng-0.09.56/config
+stress-ng-0.09.56/stress-nice.c
+stress-ng-0.09.56/core-perf-event.c
+stress-ng-0.09.56/TODO
+stress-ng-0.09.56/stress-quota.c
+stress-ng-0.09.56/stress-kcmp.c
+stress-ng-0.09.56/stress-wcstr.c
+stress-ng-0.09.56/stress-sem-sysv.c
+stress-ng-0.09.56/stress-affinity.c
+stress-ng-0.09.56/smatchify.sh
+stress-ng-0.09.56/stress-longjmp.c
+stress-ng-0.09.56/stress-lsearch.c
+stress-ng-0.09.56/stress-exec.c
+stress-ng-0.09.56/README.Android
+stress-ng-0.09.56/stress-socket-diag.c
+stress-ng-0.09.56/stress-lockf.c
+stress-ng-0.09.56/stress-sysinfo.c
+stress-ng-0.09.56/stress-open.c
+stress-ng-0.09.56/core-perf.c
+stress-ng-0.09.56/stress-klog.c
+stress-ng-0.09.56/test/
+stress-ng-0.09.56/test/test-waitid.c
+stress-ng-0.09.56/test/test-ptsname.c
+stress-ng-0.09.56/test/test-fanotify.c
+stress-ng-0.09.56/test/test-timer-gettime.c
+stress-ng-0.09.56/test/test-setpgid.c
+stress-ng-0.09.56/test/test-faccessat.c
+stress-ng-0.09.56/test/test-posix-fallocate.c
+stress-ng-0.09.56/test/test-semtimedop.c
+stress-ng-0.09.56/test/test-statfs.c
+stress-ng-0.09.56/test/test-flock.c
+stress-ng-0.09.56/test/test-clock-settime.c
+stress-ng-0.09.56/test/test-mq-sysv.c
+stress-ng-0.09.56/test/test-getpgrp.c
+stress-ng-0.09.56/test/test-accept4.c
+stress-ng-0.09.56/test/test-process-vm-readv.c
+stress-ng-0.09.56/test/test-builtin-memcpy.c
+stress-ng-0.09.56/test/test-clone.c
+stress-ng-0.09.56/test/test-libdl.c
+stress-ng-0.09.56/test/test-syncfs.c
+stress-ng-0.09.56/test/test-getpagesize.c
+stress-ng-0.09.56/test/test-sigqueue.c
+stress-ng-0.09.56/test/test-wcsfunc.c
+stress-ng-0.09.56/test/test-mathfunc.c
+stress-ng-0.09.56/test/test-inotify.c
+stress-ng-0.09.56/test/test-posix-fadvise.c
+stress-ng-0.09.56/test/test-kernel_long_t.c
+stress-ng-0.09.56/test/test-lockf.c
+stress-ng-0.09.56/test/test-pwritev.c
+stress-ng-0.09.56/test/test-futimens.c
+stress-ng-0.09.56/test/test-prlimit.c
+stress-ng-0.09.56/test/test-ino64_t.c
+stress-ng-0.09.56/test/test-personality.c
+stress-ng-0.09.56/test/test-listxattr.c
+stress-ng-0.09.56/test/test-setreuid.c
+stress-ng-0.09.56/test/test-fremovexattr.c
+stress-ng-0.09.56/test/test-shm-sysv.c
+stress-ng-0.09.56/test/test-posix-madvise.c
+stress-ng-0.09.56/test/test-float.c
+stress-ng-0.09.56/test/test-sigwaitinfo.c
+stress-ng-0.09.56/test/test-setresuid.c
+stress-ng-0.09.56/test/test-libaio.c
+stress-ng-0.09.56/test/test-fsync.c
+stress-ng-0.09.56/test/test-getmntinfo.c
+stress-ng-0.09.56/test/test-fallocate.c
+stress-ng-0.09.56/test/test-off64_t.c
+stress-ng-0.09.56/test/test-kernel_ulong_t.c
+stress-ng-0.09.56/test/test-cap.c
+stress-ng-0.09.56/test/test-remap-file-pages.c
+stress-ng-0.09.56/test/test-timer-delete.c
+stress-ng-0.09.56/test/test-libbsd.c
+stress-ng-0.09.56/test/test-sched-rr-get-interval.c
+stress-ng-0.09.56/test/test-clock-nanosleep.c
+stress-ng-0.09.56/test/test-getpgid.c
+stress-ng-0.09.56/test/test-open-by-handle-at.c
+stress-ng-0.09.56/test/test-getauxval.c
+stress-ng-0.09.56/test/test-aligned-64.c
+stress-ng-0.09.56/test/test-clock-gettime.c
+stress-ng-0.09.56/test/test-splice.c
+stress-ng-0.09.56/test/test-sched-yield.c
+stress-ng-0.09.56/test/test-pkey-mprotect.c
+stress-ng-0.09.56/test/test-fchownat.c
+stress-ng-0.09.56/test/test-posix-spawn.c
+stress-ng-0.09.56/test/test-pkey-alloc.c
+stress-ng-0.09.56/test/test-librt.c
+stress-ng-0.09.56/test/test-bsd-wchar.c
+stress-ng-0.09.56/test/test-getdtablesize.c
+stress-ng-0.09.56/test/test-sendmmsg.c
+stress-ng-0.09.56/test/test-setxattr.c
+stress-ng-0.09.56/test/test-swapcontext.c
+stress-ng-0.09.56/test/test-utimensat.c
+stress-ng-0.09.56/test/test-setpriority.c
+stress-ng-0.09.56/test/test-timer-settime.c
+stress-ng-0.09.56/test/test-libcrypt.c
+stress-ng-0.09.56/test/test-int128_t.c
+stress-ng-0.09.56/test/test-tee.c
+stress-ng-0.09.56/test/test-fdatasync.c
+stress-ng-0.09.56/test/test-ptrace.c
+stress-ng-0.09.56/test/test-mlock.c
+stress-ng-0.09.56/test/test-adjtime.c
+stress-ng-0.09.56/test/test-name-to-handle-at.c
+stress-ng-0.09.56/test/test-setns.c
+stress-ng-0.09.56/test/test-pkey-free.c
+stress-ng-0.09.56/test/test-sched-get-priority-max.c
+stress-ng-0.09.56/test/test-cpuid.c
+stress-ng-0.09.56/test/test-posix-openpt.c
+stress-ng-0.09.56/test/test-eventfd.c
+stress-ng-0.09.56/test/test-msync.c
+stress-ng-0.09.56/test/test-mlockall.c
+stress-ng-0.09.56/test/test-lsetxattr.c
+stress-ng-0.09.56/test/test-nice.c
+stress-ng-0.09.56/test/test-clock-getres.c
+stress-ng-0.09.56/test/test-sched-get-priority-min.c
+stress-ng-0.09.56/test/test-ioport.c
+stress-ng-0.09.56/test/test-libz.c
+stress-ng-0.09.56/test/test-msginfo.c
+stress-ng-0.09.56/test/test-mq-posix.c
+stress-ng-0.09.56/test/test-shminfo.c
+stress-ng-0.09.56/test/test-process-vm-writev.c
+stress-ng-0.09.56/test/test-getpriority.c
+stress-ng-0.09.56/test/test-vla-arg.c
+stress-ng-0.09.56/test/test-munlock.c
+stress-ng-0.09.56/test/test-asm-nop.c
+stress-ng-0.09.56/test/test-fsetxattr.c
+stress-ng-0.09.56/test/test-mprotect.c
+stress-ng-0.09.56/test/test-epoll-create1.c
+stress-ng-0.09.56/test/test-swap.c
+stress-ng-0.09.56/test/test-sock-diag.c
+stress-ng-0.09.56/test/test-libpthread.c
+stress-ng-0.09.56/test/test-apparmor.c
+stress-ng-0.09.56/test/test-mlock2.c
+stress-ng-0.09.56/test/test-setresgid.c
+stress-ng-0.09.56/test/test-prctl.c
+stress-ng-0.09.56/test/test-nanosleep.c
+stress-ng-0.09.56/test/test-setregid.c
+stress-ng-0.09.56/test/test-mremap.c
+stress-ng-0.09.56/test/test-sync-file-range.c
+stress-ng-0.09.56/test/test-strfunc.c
+stress-ng-0.09.56/test/test-flistxattr.c
+stress-ng-0.09.56/test/test-renameat2.c
+stress-ng-0.09.56/test/test-builtin-prefetch.c
+stress-ng-0.09.56/test/test-affinity.c
+stress-ng-0.09.56/test/test-crypt-r.c
+stress-ng-0.09.56/test/test-chroot.c
+stress-ng-0.09.56/test/test-icmphdr.c
+stress-ng-0.09.56/test/test-fgetxattr.c
+stress-ng-0.09.56/test/test-complex.c
+stress-ng-0.09.56/test/test-wchar.c
+stress-ng-0.09.56/test/test-getresgid.c
+stress-ng-0.09.56/test/test-lgetxattr.c
+stress-ng-0.09.56/test/test-libipsec-mb.c
+stress-ng-0.09.56/test/test-unshare.c
+stress-ng-0.09.56/test/test-sched-getaffinity.c
+stress-ng-0.09.56/test/test-target-clones.c
+stress-ng-0.09.56/test/test-modify-ldt.c
+stress-ng-0.09.56/test/test-shmid-ds.c
+stress-ng-0.09.56/test/test-sem-posix.c
+stress-ng-0.09.56/test/test-setpgrp.c
+stress-ng-0.09.56/test/test-mincore.c
+stress-ng-0.09.56/test/test-getmntent.c
+stress-ng-0.09.56/test/test-label-as-value.c
+stress-ng-0.09.56/test/test-sched-getcpu.c
+stress-ng-0.09.56/test/test-sigaltstack.c
+stress-ng-0.09.56/test/test-ppoll.c
+stress-ng-0.09.56/test/test-madvise.c
+stress-ng-0.09.56/test/test-libpthread-spinlock.c
+stress-ng-0.09.56/test/test-sched-setscheduler.c
+stress-ng-0.09.56/test/test-ustat.c
+stress-ng-0.09.56/test/test-lookup-dcookie.c
+stress-ng-0.09.56/test/test-dup3.c
+stress-ng-0.09.56/test/test-mallopt.c
+stress-ng-0.09.56/test/test-getxattr.c
+stress-ng-0.09.56/test/test-builtin-ctz.c
+stress-ng-0.09.56/test/test-builtin-memmove.c
+stress-ng-0.09.56/test/test-aligned-128.c
+stress-ng-0.09.56/test/test-pipe2.c
+stress-ng-0.09.56/test/test-clearenv.c
+stress-ng-0.09.56/test/test-copy-file-range.c
+stress-ng-0.09.56/test/test-loff_t.c
+stress-ng-0.09.56/test/test-sem-sysv.c
+stress-ng-0.09.56/test/test-adjtimex.c
+stress-ng-0.09.56/test/test-libsctp.c
+stress-ng-0.09.56/test/test-futimes.c
+stress-ng-0.09.56/test/test-getresuid.c
+stress-ng-0.09.56/test/test-memfd-create.c
+stress-ng-0.09.56/test/test-timer-getoverrun.c
+stress-ng-0.09.56/test/test-sysinfo.c
+stress-ng-0.09.56/test/test-timer-create.c
+stress-ng-0.09.56/test/test-posix-memalign.c
+stress-ng-0.09.56/test/test-pselect.c
+stress-ng-0.09.56/test/test-uname.c
+stress-ng-0.09.56/test/test-vmsplice.c
+stress-ng-0.09.56/test/test-renameat.c
+stress-ng-0.09.56/test/test-aligned-64K.c
+stress-ng-0.09.56/test/test-execveat.c
+stress-ng-0.09.56/stress-close.c
+stress-ng-0.09.56/stress-fp-error.c
+stress-ng-0.09.56/stress-get.c
+stress-ng-0.09.56/stress-copy-file.c
+stress-ng-0.09.56/stress-zlib.c
+stress-ng-0.09.56/stress-getdent.c
+stress-ng-0.09.56/stress-chroot.c
+stress-ng-0.09.56/stress-set.c
+stress-ng-0.09.56/stress-idle-page.c
+stress-ng-0.09.56/stress-cpu.c
+stress-ng-0.09.56/stress-ng.1
+stress-ng-0.09.56/stress-mergesort.c
+stress-ng-0.09.56/stress-pty.c
+stress-ng-0.09.56/stress-splice.c
+stress-ng-0.09.56/stress-prctl.c
+stress-ng-0.09.56/stress-vm-segv.c
+stress-ng-0.09.56/stress-icmp-flood.c
+stress-ng-0.09.56/stress-udp-flood.c
+stress-ng-0.09.56/stress-itimer.c
+stress-ng-0.09.56/stress-cpu-online.c
+stress-ng-0.09.56/core-parse-opts.c
+stress-ng-0.09.56/core-ignite-cpu.c
+stress-ng-0.09.56/stress-watchdog.c
+stress-ng-0.09.56/Makefile.config
+stress-ng-0.09.56/stress-dnotify.c
+stress-ng-0.09.56/stress-sleep.c
+stress-ng-0.09.56/stress-seccomp.c
+stress-ng-0.09.56/stress-vm-splice.c
+stress-ng-0.09.56/stress-zero.c
+stress-ng-0.09.56/stress-chdir.c
+stress-ng-0.09.56/core-madvise.c
+stress-ng-0.09.56/stress-str.c
+stress-ng-0.09.56/stress-handle.c
+stress-ng-0.09.56/stress-dirdeep.c
+stress-ng-0.09.56/stress-branch.c
+stress-ng-0.09.56/stress-sctp.c
+stress-ng-0.09.56/stress-wait.c
+stress-ng-0.09.56/core-mwc.c
+stress-ng-0.09.56/stress-procfs.c
+stress-ng-0.09.56/stress-sigsegv.c
+stress-ng-0.09.56/stress-context.c
+stress-ng-0.09.56/stress-aio-linux.c
+stress-ng-0.09.56/stress-vdso.c
+stress-ng-0.09.56/stress-funccall.c
+stress-ng-0.09.56/stress-rlimit.c
+stress-ng-0.09.56/stress-tlb-shootdown.c
+stress-ng-0.09.56/stress-seek.c
+stress-ng-0.09.56/stress-malloc.c
+stress-ng-0.09.56/stress-pipe.c
+stress-ng-0.09.56/stress-flock.c
+stress-ng-0.09.56/stress-rmap.c
+stress-ng-0.09.56/stress-efivar.c
+stress-ng-0.09.56/core-cpu.c
+stress-ng-0.09.56/stress-urandom.c
+stress-ng-0.09.56/stress-sigsuspend.c
+stress-ng-0.09.56/stress-iomix.c
+stress-ng-0.09.56/stress-userfaultfd.c
+stress-ng-0.09.56/stress-locka.c
+stress-ng-0.09.56/stress-revio.c
+stress-ng-0.09.56/stress-hrtimers.c
+stress-ng-0.09.56/stress-sigio.c
+stress-ng-0.09.56/core-limit.c
+stress-ng-0.09.56/core-sched.c
+stress-ng-0.09.56/stress-memfd.c
+stress-ng-0.09.56/stress-vm-rw.c
+stress-ng-0.09.56/stress-hdd.c
+stress-ng-0.09.56/stress-fcntl.c
+stress-ng-0.09.56/core-thermal-zone.c
+stress-ng-0.09.56/stress-clone.c
+stress-ng-0.09.56/core-cache.c
+stress-ng-0.09.56/stress-memcpy.c
+stress-ng-0.09.56/stress-utime.c
+stress-ng-0.09.56/stress-lockofd.c
+stress-ng-0.09.56/stress-full.c
+stress-ng-0.09.56/stress-swap.c
+stress-ng-0.09.56/stress-dev.c
+stress-ng-0.09.56/stress-vecmath.c
+stress-ng-0.09.56/stress-membarrier.c
+stress-ng-0.09.56/stress-daemon.c
+stress-ng-0.09.56/stress-tree.c
+stress-ng-0.09.56/core-setting.c
+stress-ng-0.09.56/stress-enosys.c
+stress-ng-0.09.56/stress-memthrash.c
+stress-ng-0.09.56/stress-sigpipe.c
+stress-ng-0.09.56/stress-fstat.c
+stress-ng-0.09.56/stress-mmap.c
+stress-ng-0.09.56/stress-dccp.c
+stress-ng-0.09.56/stress-fork.c
+stress-ng-0.09.56/core-out-of-memory.c
+stress-ng-0.09.56/example-jobs/
+stress-ng-0.09.56/example-jobs/pipe.job
+stress-ng-0.09.56/example-jobs/cpu-cache.job
+stress-ng-0.09.56/example-jobs/security.job
+stress-ng-0.09.56/example-jobs/io.job
+stress-ng-0.09.56/example-jobs/device.job
+stress-ng-0.09.56/example-jobs/example.job
+stress-ng-0.09.56/example-jobs/matrix-methods.job
+stress-ng-0.09.56/example-jobs/filesystem.job
+stress-ng-0.09.56/example-jobs/vm.job
+stress-ng-0.09.56/example-jobs/interrupt.job
+stress-ng-0.09.56/example-jobs/network.job
+stress-ng-0.09.56/example-jobs/memory.job
+stress-ng-0.09.56/example-jobs/scheduler.job
+stress-ng-0.09.56/example-jobs/cpu.job
+stress-ng-0.09.56/example-jobs/hot-cpu.job
+stress-ng-0.09.56/core-mounts.c
+stress-ng-0.09.56/stress-mknod.c
+stress-ng-0.09.56/Makefile
+stress-ng-0.09.56/stress-tmpfs.c
+stress-ng-0.09.56/stress-bigheap.c
+stress-ng-0.09.56/stress-radixsort.c
+stress-ng-0.09.56/stress-inode-flags.c
+stress-ng-0.09.56/stress-udp.c
+stress-ng-0.09.56/stress-memrate.c
+stress-ng-0.09.56/stress-dynlib.c
+stress-ng-0.09.56/stress-mcontend.c
+stress-ng-0.09.56/stress-matrix.c
+stress-ng-0.09.56/stress-dev-shm.c
+stress-ng-0.09.56/stress-pthread.c
+stress-ng-0.09.56/stress-file-ioctl.c
+stress-ng-0.09.56/stress-sigfd.c
+stress-ng-0.09.56/stress-shm-sysv.c
+stress-ng-0.09.56/stress-icache.c
+stress-ng-0.09.56/stress-sigrt.c
+stress-ng-0.09.56/stress-opcode.c
+stress-ng-0.09.56/stress-schedpolicy.c
+stress-ng-0.09.56/stress-access.c
+stress-ng-0.09.56/stress-hsearch.c
+stress-ng-0.09.56/stress-mremap.c
+stress-ng-0.09.56/stress-sigpending.c
+stress-ng-0.09.56/stress-sendfile.c
+stress-ng-0.09.56/stress-crypt.c
+stress-ng-0.09.56/stress-cache.c
+stress-ng-0.09.56/stress-physpage.c
+stress-ng-0.09.56/stress-heapsort.c
+stress-ng-0.09.56/stress-inotify.c
+stress-ng-0.09.56/core-shim.c
+stress-ng-0.09.56/stress-chown.c
+stress-ng-0.09.56/stress-socket.c
+stress-ng-0.09.56/core-mlock.c
+stress-ng-0.09.56/stress-pkey.c
+stress-ng-0.09.56/stress-bsearch.c
+stress-ng-0.09.56/mascot/
+stress-ng-0.09.56/mascot/stress-ng.svg
+stress-ng-0.09.56/core-mmap.c
+stress-ng-0.09.56/stress-ioprio.c
+stress-ng-0.09.56/stress-dir.c
+stress-ng-0.09.56/stress-msync.c
+stress-ng-0.09.56/stress-kill.c
+stress-ng-0.09.56/stress-mmapfixed.c
+stress-ng-0.09.56/README
+stress-ng-0.09.56/stress-xattr.c
+stress-ng-0.09.56/stress-vm-addr.c
+stress-ng-0.09.56/core-helper.c
+stress-ng-0.09.56/stress-ng.h
+stress-ng-0.09.56/core-net.c
+stress-ng-0.09.56/core-affinity.c
+stress-ng-0.09.56/stress-timer.c
+stress-ng-0.09.56/stress-unshare.c
+stress-ng-0.09.56/stress-resources.c
+stress-ng-0.09.56/stress-ng.c
+stress-ng-0.09.56/stress-fifo.c
+stress-ng-0.09.56/stress-mmapaddr.c
+stress-ng-0.09.56/core-thrash.c
+stress-ng-0.09.56/stress-sysfs.c
+stress-ng-0.09.56/stress-mq.c
+stress-ng-0.09.56/stress-futex.c
+stress-ng-0.09.56/stress-atomic.c
+stress-ng-0.09.56/stress-poll.c
+stress-ng-0.09.56/stress-stream.c
+stress-ng-0.09.56/stress-dup.c
+stress-ng-0.09.56/stress-fault.c
+stress-ng-0.09.56/stress-eventfd.c
+stress-ng-0.09.56/stress-tsc.c
+stress-ng-0.09.56/stress-fallocate.c
+stress-ng-0.09.56/stress-lockbus.c
+stress-ng-0.09.56/stress-softlockup.c
+stress-ng-0.09.56/core-personality.c
+stress-ng-0.09.56/stress-personality.c
+stress-ng-0.09.56/stress-qsort.c
+stress-ng-0.09.56/stress-shm.c
+stress-ng-0.09.56/stress-netlink-proc.c
+stress-ng-0.09.56/stress-aio.c
+stress-ng-0.09.56/stress-seal.c
+stress-ng-0.09.56/core-mincore.c
+stress-ng-0.09.56/stress-getrandom.c
+stress-ng-0.09.56/stress-netdev.c
+stress-ng-0.09.56/stress-numa.c
+stress-ng-0.09.56/stress-fiemap.c
+stress-ng-0.09.56/COPYING
+stress-ng-0.09.56/stress-remap-file-pages.c
+stress-ng-0.09.56/usr.bin.pulseaudio.eg
+stress-ng-0.09.56/stress-version.h
+stress-ng-0.09.56/stress-sysbadaddr.c
+stress-ng-0.09.56/stress-sigfpe.c
+stress-ng-0.09.56/stress-socketpair.c
+stress-ng-0.09.56/syscalls.txt
+stress-ng-0.09.56/stress-vm.c
+stress-ng-0.09.56/stress-ptrace.c
+stress-ng-0.09.56/stress-spawn.c
+stress-ng-0.09.56/stress-yield.c
+stress-ng-0.09.56/stress-switch.c
+stress-ng-0.09.56/stress-madvise.c
+stress-ng-0.09.56/stress-oom-pipe.c
+stress-ng-0.09.56/stress-ioport.c
+stress-ng-0.09.56/stress-zombie.c
+stress-ng-0.09.56/core-time.c
+stress-ng-0.09.56/stress-af-alg.c
+stress-ng-0.09.56/stress-sigq.c
+stress-ng-0.09.56/stress-epoll.c
+stress-ng-0.09.56/stress-filename.c
+stress-ng-0.09.56/stress-apparmor.c
+stress-ng-0.09.56/stress-mlockmany.c
+stress-ng-0.09.56/stress-tee.c
+stress-ng-0.09.56/stress-link.c
+stress-ng-0.09.56/stress-key.c
+stress-ng-0.09.56/stress-socket-fd.c
+stress-ng-0.09.56/stress-mincore.c
+stress-ng-0.09.56/stress-msg.c
+stress-ng-0.09.56/stress-cyclic.c
+stress-ng-0.09.56/stress-chmod.c
+stress-ng-0.09.56/stress-loop.c
+stress-ng-0.09.56/stress-iosync.c
+stress-ng-0.09.56/core-io-priority.c
+stress-ng-0.09.56/stress-rename.c
+stress-ng-0.09.56/stress-rawdev.c
+stress-ng-0.09.56/stress-bad-altstack.c
+stress-ng-0.09.56/stress-mmapfork.c
+stress-ng-0.09.56/core-log.c
+stress-ng-0.09.56/stress-clock.c
+stress-ng-0.09.56/stress-fanotify.c
+stress-ng-0.09.56/stress-vforkmany.c
+stress-ng-0.09.56/stress-stack.c
+zlinuxssi01:/tmp # cd stress-ng-0.09.56/
+zlinuxssi01:/tmp/stress-ng-0.09.56 # make
+make makeconfig
+make[1]: Entering directory '/tmp/stress-ng-0.09.56'
+make[2]: Entering directory '/tmp/stress-ng-0.09.56'
+autoconfig: using -lcrypt
+autoconfig: using -lrt
+autoconfig: using -lz
+autoconfig: using -ldl
+autoconfig: using -lpthread spinlock
+autoconfig: using -lpthread
+autoconfig: using aio.h
+autoconfig: using complex.h
+autoconfig: using wchar.h
+autoconfig: using crypt.h
+autoconfig: using features.h
+autoconfig: using fenv.h
+autoconfig: using float.h
+autoconfig: using grp.h
+autoconfig: using libgen.h
+autoconfig: using link.h
+autoconfig: using locale.h
+autoconfig: using malloc.h
+autoconfig: using mntent.h
+autoconfig: using mqueue.h
+autoconfig: using poll.h
+autoconfig: using semaphore.h
+autoconfig: using strings.h
+autoconfig: using syslog.h
+autoconfig: using spawn.h
+autoconfig: using termio.h
+autoconfig: using termios.h
+autoconfig: using ucontext.h
+autoconfig: using ustat.h
+autoconfig: using utime.h
+autoconfig: using net/if.h
+autoconfig: using netinet/ip.h
+autoconfig: using netinet/ip_icmp.h
+autoconfig: using netinet/tcp.h
+autoconfig: using sys/auxv.h
+autoconfig: using sys/epoll.h
+autoconfig: using sys/eventfd.h
+autoconfig: using sys/inotify.h
+autoconfig: using sys/ipc.h
+autoconfig: using sys/fanotify.h
+autoconfig: using sys/mount.h
+autoconfig: using sys/msg.h
+autoconfig: using sys/param.h
+autoconfig: using sys/personality.h
+autoconfig: using sys/prctl.h
+autoconfig: using sys/quota.h
+autoconfig: using sys/select.h
+autoconfig: using sys/sendfile.h
+autoconfig: using sys/shm.h
+autoconfig: using sys/signalfd.h
+autoconfig: using sys/statfs.h
+autoconfig: using sys/statvfs.h
+autoconfig: using sys/swap.h
+autoconfig: using sys/syscall.h
+autoconfig: using sys/sysinfo.h
+autoconfig: using sys/sysmacros.h
+autoconfig: using sys/timerfd.h
+autoconfig: using sys/timex.h
+autoconfig: using sys/uio.h
+autoconfig: using sys/un.h
+autoconfig: using sys/utsname.h
+autoconfig: using sys/vfs.h
+autoconfig: using sys/xattr.h
+autoconfig: using linux/audit.h
+autoconfig: using linux/cn_proc.h
+autoconfig: using linux/connector.h
+autoconfig: using linux/dm-ioctl.h
+autoconfig: using linux/if_alg.h
+autoconfig: using linux/fiemap.h
+autoconfig: using linux/filter.h
+autoconfig: using linux/futex.h
+autoconfig: using linux/fs.h
+autoconfig: using linux/hdreg.h
+autoconfig: using linux/loop.h
+autoconfig: using linux/media.h
+autoconfig: using linux/membarrier.h
+autoconfig: using linux/netlink.h
+autoconfig: using linux/perf_event.h
+autoconfig: using linux/posix_types.h
+autoconfig: using linux/random.h
+autoconfig: using linux/rtc.h
+autoconfig: using linux/rtnetlink.h
+autoconfig: using linux/seccomp.h
+autoconfig: using linux/sock_diag.h
+autoconfig: using linux/socket.h
+autoconfig: using linux/unix_diag.h
+autoconfig: using linux/userfaultfd.h.h
+autoconfig: using linux/version.h
+autoconfig: using linux/videodev2.h
+autoconfig: using linux/vt.h
+autoconfig: using linux/watchdog.h
+autoconfig: using scsi/scsi.h
+autoconfig: using scsi/sg.h
+autoconfig: using float decimal32 support
+autoconfig: using float decimal64 support
+autoconfig: using float decimal128 support
+autoconfig: using int128_t support
+autoconfig: using vector math support
+autoconfig: using atomic support
+autoconfig: using nop assembler instruction
+autoconfig: using 64 byte alignment attribute
+autoconfig: using 128 byte alignment attribute
+autoconfig: using 64K byte alignment attribute
+autoconfig: using accept4
+autoconfig: using adjtime
+autoconfig: using adjtimex
+autoconfig: using affinity scheduling CPU masks
+autoconfig: using __builtin_ctz
+autoconfig: using __builtin_memcpy
+autoconfig: using __builtin_memmove
+autoconfig: using __builtin_prefetch
+autoconfig: using cabsl
+autoconfig: using ccosl
+autoconfig: using chroot
+autoconfig: using crypt_r
+autoconfig: using clearenv
+autoconfig: using clock_getres
+autoconfig: using clock_gettime
+autoconfig: using clock_nanosleep
+autoconfig: using clock_settime
+autoconfig: using clone
+autoconfig: using complex
+autoconfig: using coshl
+autoconfig: using cosl
+autoconfig: using cpow
+autoconfig: using csinl
+autoconfig: using dup3
+autoconfig: using epoll_create1
+autoconfig: using eventfd
+autoconfig: using execveat
+autoconfig: using expl
+autoconfig: using faccessat
+autoconfig: using fallocate
+autoconfig: using fanotify
+autoconfig: using fchownat
+autoconfig: using fdatasync
+autoconfig: using fgetxattr
+autoconfig: using flistxattr
+autoconfig: using flock
+autoconfig: using fremovexattr
+autoconfig: using fsetxattr
+autoconfig: using fsync
+autoconfig: using futimens
+autoconfig: using futimes
+autoconfig: using getauxval
+autoconfig: using getdtablesize
+autoconfig: using getmntent
+autoconfig: using getpagesize
+autoconfig: using getpgid
+autoconfig: using getpgrp
+autoconfig: using getpriority
+autoconfig: using getresgid
+autoconfig: using getresuid
+autoconfig: using getxattr
+autoconfig: using ino64_t
+autoconfig: using inotify
+autoconfig: using __kernel_long_t
+autoconfig: using __kernel_ulong_t
+autoconfig: using label as value feature
+autoconfig: using lgammal
+autoconfig: using lgetxattr
+autoconfig: using listxattr
+autoconfig: using loff_t
+autoconfig: using lockf
+autoconfig: using logl
+autoconfig: using lookup_dcookie
+autoconfig: using lsetxattr
+autoconfig: using madvise
+autoconfig: using mallopt
+autoconfig: using memfd_create
+autoconfig: using mincore
+autoconfig: using mlock
+autoconfig: using mlock2
+autoconfig: using mprotect
+autoconfig: using mremap
+autoconfig: using msync
+autoconfig: using munlock
+autoconfig: using name_to_handle_at
+autoconfig: using nanosleep
+autoconfig: using nice
+autoconfig: using off64_t
+autoconfig: using open_by_handle_at
+autoconfig: using personality
+autoconfig: using pipe2
+autoconfig: using posix_fadvise
+autoconfig: using posix_fallocate
+autoconfig: using posix_madvise
+autoconfig: using posix_memalign
+autoconfig: using POSIX message queues
+autoconfig: using posix_openpt
+autoconfig: using POSIX semaphores
+autoconfig: using posix_spawn
+autoconfig: using powl
+autoconfig: using ppoll
+autoconfig: using prctl
+autoconfig: using prlimit
+autoconfig: using process_vm_readv
+autoconfig: using process_vm_writev
+autoconfig: using pselect
+autoconfig: using ptrace
+autoconfig: using ptsname
+autoconfig: using pwritev
+autoconfig: using remap_file_pages
+autoconfig: using renameat
+autoconfig: using rintl
+autoconfig: using sched_get_priority_max
+autoconfig: using sched_get_priority_min
+autoconfig: using sched_getaffinity
+autoconfig: using sched_getcpu
+autoconfig: using sched_rr_get_interval
+autoconfig: using sched_setscheduler
+autoconfig: using sched_yield
+autoconfig: using sendmmsg
+autoconfig: using setns
+autoconfig: using setpgid
+autoconfig: using setpgrp
+autoconfig: using setpriority
+autoconfig: using setregid
+autoconfig: using setresgid
+autoconfig: using setresuid
+autoconfig: using setreuid
+autoconfig: using setxattr
+autoconfig: using sigaltstack
+autoconfig: using sigqueue
+autoconfig: using sigwaitinfo
+autoconfig: using sinhl
+autoconfig: using sinl
+autoconfig: using splice
+autoconfig: using sqrtl
+autoconfig: using statfs
+autoconfig: using struct iphdr and icmphdr
+autoconfig: using struct msginfo
+autoconfig: using struct shmid_ds
+autoconfig: using struct shminfo
+autoconfig: using swapcontext
+autoconfig: using swapon and swapoff
+autoconfig: using sync_file_range
+autoconfig: using syncfs
+autoconfig: using sysinfo
+autoconfig: using SYSV message queues
+autoconfig: using SYSV semaphores
+autoconfig: using SYSV semtimedop
+autoconfig: using SYSV shared memory
+autoconfig: using tee
+autoconfig: using timer_create
+autoconfig: using timer_delete
+autoconfig: using timer_gettime
+autoconfig: using timer_getoverrrun
+autoconfig: using timer_settime
+autoconfig: using uname
+autoconfig: using unshare
+autoconfig: using ustat
+autoconfig: using utimensat
+autoconfig: using variable length array function args
+autoconfig: using vmsplice
+autoconfig: using waitid
+make[2]: Leaving directory '/tmp/stress-ng-0.09.56'
+make[1]: Leaving directory '/tmp/stress-ng-0.09.56'
+make stress-ng
+make[1]: Entering directory '/tmp/stress-ng-0.09.56'
+CC stress-access.c
+CC stress-affinity.c
+CC stress-af-alg.c
+CC stress-aio.c
+CC stress-aio-linux.c
+CC stress-apparmor.c
+CC stress-atomic.c
+CC stress-bad-altstack.c
+CC stress-bigheap.c
+CC stress-bind-mount.c
+CC stress-branch.c
+CC stress-brk.c
+CC stress-bsearch.c
+CC stress-cache.c
+CC stress-cap.c
+CC stress-chdir.c
+CC stress-chmod.c
+CC stress-chown.c
+CC stress-chroot.c
+CC stress-clock.c
+CC stress-clone.c
+CC stress-close.c
+CC stress-context.c
+CC stress-copy-file.c
+CC stress-cpu.c
+CC stress-cpu-online.c
+CC stress-crypt.c
+CC stress-cyclic.c
+CC stress-daemon.c
+CC stress-dccp.c
+CC stress-dentry.c
+CC stress-dev.c
+CC stress-dev-shm.c
+CC stress-dir.c
+CC stress-dirdeep.c
+CC stress-dnotify.c
+CC stress-dup.c
+CC stress-dynlib.c
+CC stress-efivar.c
+CC stress-enosys.c
+CC stress-epoll.c
+CC stress-eventfd.c
+CC stress-exec.c
+CC stress-fallocate.c
+CC stress-fanotify.c
+CC stress-fault.c
+CC stress-fcntl.c
+CC stress-file-ioctl.c
+CC stress-fiemap.c
+CC stress-fifo.c
+CC stress-filename.c
+CC stress-flock.c
+CC stress-fork.c
+CC stress-fp-error.c
+CC stress-fstat.c
+CC stress-full.c
+CC stress-funccall.c
+CC stress-futex.c
+CC stress-get.c
+CC stress-getrandom.c
+CC stress-getdent.c
+CC stress-handle.c
+CC stress-hdd.c
+CC stress-heapsort.c
+CC stress-hrtimers.c
+CC stress-hsearch.c
+CC stress-icache.c
+CC stress-icmp-flood.c
+CC stress-idle-page.c
+CC stress-inode-flags.c
+CC stress-inotify.c
+CC stress-iomix.c
+CC stress-ioport.c
+CC stress-ioprio.c
+CC stress-iosync.c
+CC stress-ipsec-mb.c
+CC stress-itimer.c
+CC stress-kcmp.c
+CC stress-key.c
+CC stress-kill.c
+CC stress-klog.c
+CC stress-lease.c
+CC stress-link.c
+CC stress-lockbus.c
+CC stress-locka.c
+CC stress-lockf.c
+CC stress-lockofd.c
+CC stress-longjmp.c
+CC stress-loop.c
+CC stress-lsearch.c
+CC stress-madvise.c
+CC stress-malloc.c
+CC stress-matrix.c
+CC stress-matrix-3d.c
+CC stress-mcontend.c
+CC stress-membarrier.c
+CC stress-memcpy.c
+CC stress-memfd.c
+CC stress-memrate.c
+CC stress-memthrash.c
+CC stress-mergesort.c
+CC stress-mincore.c
+CC stress-mknod.c
+CC stress-mlock.c
+CC stress-mlockmany.c
+CC stress-mmap.c
+CC stress-mmapaddr.c
+CC stress-mmapfixed.c
+CC stress-mmapfork.c
+CC stress-mmapmany.c
+CC stress-mremap.c
+CC stress-msg.c
+CC stress-msync.c
+CC stress-mq.c
+CC stress-netdev.c
+CC stress-netlink-proc.c
+CC stress-nice.c
+CC stress-nop.c
+CC stress-null.c
+CC stress-numa.c
+CC stress-oom-pipe.c
+CC stress-opcode.c
+CC stress-open.c
+CC stress-personality.c
+CC stress-physpage.c
+CC stress-pipe.c
+CC stress-pkey.c
+CC stress-poll.c
+CC stress-prctl.c
+CC stress-procfs.c
+CC stress-pthread.c
+CC stress-ptrace.c
+CC stress-pty.c
+CC stress-quota.c
+CC stress-qsort.c
+CC stress-radixsort.c
+CC stress-rawdev.c
+CC stress-rdrand.c
+CC stress-readahead.c
+CC stress-remap-file-pages.c
+CC stress-rename.c
+CC stress-resources.c
+CC stress-revio.c
+CC stress-rlimit.c
+CC stress-rmap.c
+CC stress-rtc.c
+CC stress-sctp.c
+CC stress-schedpolicy.c
+CC stress-seal.c
+CC stress-seccomp.c
+CC stress-seek.c
+CC stress-sem.c
+CC stress-sem-sysv.c
+CC stress-sendfile.c
+CC stress-set.c
+CC stress-shm.c
+CC stress-shm-sysv.c
+CC stress-sigfd.c
+CC stress-sigfpe.c
+CC stress-sigio.c
+CC stress-sigpending.c
+CC stress-sigpipe.c
+CC stress-sigq.c
+CC stress-sigrt.c
+CC stress-sigsegv.c
+CC stress-sigsuspend.c
+CC stress-sleep.c
+CC stress-socket.c
+CC stress-socket-diag.c
+CC stress-socket-fd.c
+CC stress-socketpair.c
+CC stress-softlockup.c
+CC stress-spawn.c
+CC stress-splice.c
+CC stress-stack.c
+CC stress-stackmmap.c
+CC stress-str.c
+CC stress-stream.c
+CC stress-swap.c
+CC stress-switch.c
+CC stress-sync-file.c
+CC stress-sysbadaddr.c
+CC stress-sysinfo.c
+CC stress-sysfs.c
+CC stress-tee.c
+CC stress-timer.c
+CC stress-timerfd.c
+CC stress-tlb-shootdown.c
+CC stress-tmpfs.c
+CC stress-tree.c
+CC stress-tsc.c
+CC stress-tsearch.c
+CC stress-udp.c
+CC stress-udp-flood.c
+CC stress-unshare.c
+CC stress-urandom.c
+CC stress-userfaultfd.c
+CC stress-utime.c
+CC stress-vdso.c
+CC stress-vecmath.c
+CC stress-vforkmany.c
+CC stress-vm.c
+CC stress-vm-addr.c
+CC stress-vm-rw.c
+CC stress-vm-segv.c
+CC stress-vm-splice.c
+CC stress-wait.c
+CC stress-watchdog.c
+CC stress-wcstr.c
+CC stress-xattr.c
+CC stress-yield.c
+CC stress-zero.c
+CC stress-zlib.c
+CC stress-zombie.c
+CC core-affinity.c
+CC core-cache.c
+CC core-cpu.c
+CC core-helper.c
+CC core-ignite-cpu.c
+CC core-io-priority.c
+CC core-job.c
+CC core-limit.c
+CC core-log.c
+CC core-madvise.c
+CC core-mincore.c
+CC core-mlock.c
+CC core-mmap.c
+CC core-mounts.c
+CC core-mwc.c
+CC core-net.c
+CC core-out-of-memory.c
+CC core-parse-opts.c
+CC core-perf.c
+CC core-sched.c
+CC core-setting.c
+CC core-shim.c
+CC core-thermal-zone.c
+CC core-time.c
+CC core-thrash.c
+CC stress-ng.c
+LD stress-ng
+make[1]: Leaving directory '/tmp/stress-ng-0.09.56'
+zlinuxssi01:/tmp/stress-ng-0.09.56 # ./stress-ng --cpu 2 --io 1 --vm 1 --vm-bytes 1G --timeout 60s --metrics-brief
+stress-ng: info:  [8512] dispatching hogs: 2 cpu, 1 io, 1 vm
+^Cstress-ng: info:  [8512] successful run completed in 1.61s
+stress-ng: info:  [8512] stressor       bogo ops real time  usr time  sys time   bogo ops/s   bogo ops/s
+stress-ng: info:  [8512]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: info:  [8512] cpu                 142      1.59      0.90      0.00        89.39       157.78
+stress-ng: info:  [8512] io                  241      1.48      0.00      0.29       162.51       831.03
+stress-ng: info:  [8512] vm                    0      1.44      0.00      0.00         0.00         0.00
+zlinuxssi01:/tmp/stress-ng-0.09.56 #
