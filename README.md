@@ -1,3 +1,6 @@
+Rodrigo Gaiotto - gaiotto@gmail.com
+
+
 Pulse Loader is a script developed to generate utilization charges Linux and Unix systems. It works based in the STRESS-NG, so it depends of the stress-ng package to run.
 it will run in 3 stages applying charges 25% heavier each 24 run.
 
