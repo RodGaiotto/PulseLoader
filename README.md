@@ -22,10 +22,15 @@ Example:
 Where:
 
 -- cpu 5 will make use of 5 processors.
+
 -- io 1 will generate one batch of I/O instructions
+
 -- vm 1 --vmbytes 100% will generate one virtual instance that will pick up 100% of the memory available.
+
 -- timeout 120s means that it will run for 120 seconds
+
 -- metrics-brief will produce a report after the program execution.
+
 
 Complete references:
 https://manpages.ubuntu.com/manpages/artful/man1/stress-ng.1.html#bugs
